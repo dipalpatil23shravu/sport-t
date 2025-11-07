@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SportHub - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Extra styles for the form */
+    form {
+      background: linear-gradient(145deg, #305ba4, #1f426e);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow:
+        0 0 15px #4a7bd6,
+        inset 0 0 20px #6094e0;
+      color: #d0e1ff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      border: none;
+      font-size: 1rem;
+      box-shadow: inset 0 0 6px #1c2a4f;
+      background: #2a3a65;
+      color: #e0e9ff;
+      resize: vertical;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow:
+        0 0 8px #7fa8ff,
+        inset 0 0 8px #7fa8ff;
+      background: #3a4e83;
+    }
+
+    button[type="submit"] {
+      background: linear-gradient(145deg, #72aaff, #3366ff);
+      border: none;
+      border-radius: 30px;
+      padding: 15px 50px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      box-shadow:
+        0 4px 10px #3f6ee1,
+        inset 0 1px 0 #a2c4ff,
+        inset 0 -3px 6px #2e59e3;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+
+    button[type="submit"]:hover,
+    button[type="submit"]:focus {
+      background: linear-gradient(145deg, #3366ff, #72aaff);
+      box-shadow:
+        0 6px 15px #2553cc,
+        inset 0 1px 0 #b4d1ff,
+        inset 0 -4px 8px #1f44b3;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SportHub</div>
+  </header>
+  <nav>
+    <ul class="menu">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h1>Contact Us</h1>
+      <form onsubmit="event.preventDefault(); alert('Thank you for contacting SportHub!'); this.reset();">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 SportHub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
